@@ -56,3 +56,21 @@ _MONGOURL : 'mongodb://volumeName:27017/dbname_
 `docker push <username>/<image_name>:<tag_name>`
 
 ## 4) Docker compose
+
+Run the yaml file : `docker-compose up`
+
+backend:
+build: . (for building image by container itself by docker-compose up)
+image: "backend" (for user to build image then run docker-compose up)
+
+## 5) Bind Mount
+
+`docker run -p 3000:3000 -v ./app:/<project_name>/app  <image_name>`
+
+## 6) Edit folder inside cotainer
+
+`docker exec -it <contianer_id> /bin/bash`
+
+`apt-get update`
+
+`apt-get  install vim`
